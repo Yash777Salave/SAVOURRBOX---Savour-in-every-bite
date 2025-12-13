@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "912795308692",
+    "project_id": "savourbox",
+    "storage_bucket": "savourbox.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912795308692:android:cca5e497e5a146ae20da81",
+        "android_client_info": {
+          "package_name": "com.savourbox"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqtEnvl9bBelMaWXGdt6rO85_CU5S_apQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
