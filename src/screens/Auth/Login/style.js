@@ -15,7 +15,11 @@ export const styles = StyleSheet.create({
     // borderBottomLeftRadius: 40,
     // borderBottomRightRadius: 40,
   },
-  bgImageContainer: { width: '100%', height: '40%', backgroundColor: 'blue' },
+  bgImageContainer: {
+    width: '100%',
+    height: '40%',
+    backgroundColor: 'blue',
+  },
   fieldsContainer: {
     // borderWidth: 1,
     width: '100%',
@@ -41,14 +45,14 @@ export const styles = StyleSheet.create({
   buttonContainer: {
     borderWidth: 1,
     marginTop: 30,
-    // borderRadius
   },
   dontHaveAccountContainer: {
     flexDirection: 'row',
     gap: 10,
     justifyContent: 'center',
+    // marginTop: 15,
+    alignContent: 'center',
     alignItems: 'center',
-    marginTop: 15,
   },
   dontHaveAccountText: {
     fontSize: CONSTANTS.fontSize.fontSize15,
@@ -58,5 +62,15 @@ export const styles = StyleSheet.create({
     fontSize: CONSTANTS.fontSize.fontSize15,
     color: CONSTANTS.THEME.PRIMARY_COLOR,
     fontWeight: 'bold',
+  },
+  continueWith: {
+    fontSize: CONSTANTS.fontSize.fontSize15,
+    color: CONSTANTS.colors.GRAY_COLOR,
+  },
+  orContinueWithContainer: {
+    alignContent: 'center',
+    alignItems: 'center',
+    marginTop: 20,
+    marginBottom: 20,
   },
 });
