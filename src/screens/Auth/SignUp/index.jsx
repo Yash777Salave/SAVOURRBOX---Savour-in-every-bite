@@ -6,11 +6,9 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React from 'react';
 import { styles } from './style';
 import Button from '../../../components/Button/Button';
-import { GoogleFacebookAuthScreen } from '../../../components/GoogleFacebookAuthScreen';
-const Login = () => {
+const SignUp = () => {
   return (
     <View style={styles.mainContainer}>
       <StatusBar
@@ -20,13 +18,17 @@ const Login = () => {
       />
       <View style={styles.bgImageContainer}>
         <Image
-          source={require('../../../assets/images/login-graphic.png')}
+          source={require('../../../assets/images/meal.webp')}
           style={styles.bgImage}
         />
       </View>
       <View style={styles.fieldsContainer}>
         <View>
-          <Text style={styles.fieldName}>Email Address</Text>
+          <Text style={styles.fieldName}>Name</Text>
+          <TextInput placeholder="Name" style={styles.inputField} />
+        </View>
+        <View style={styles.passwordInputContainer}>
+          <Text style={styles.fieldName}>Email</Text>
           <TextInput
             placeholder="Email"
             style={styles.inputField}
@@ -41,22 +43,18 @@ const Login = () => {
             secureTextEntry
           />
         </View>
-        <Button text={'Login'} />
-        <View style={styles.orContinueWithContainer}>
-          <Text style={styles.continueWith}>or continue with</Text>
+        <View style={styles.passwordInputContainer}>
+          <Text style={styles.fieldName}>Confirm Password</Text>
+          <TextInput
+            placeholder="Confirm Password"
+            style={styles.inputField}
+            secureTextEntry
+          />
         </View>
-        <GoogleFacebookAuthScreen />
-      </View>
-      <View style={styles.dontHaveAccountContainer}>
-        <View>
-          <Text style={styles.dontHaveAccountText}>Don't have an account?</Text>
-        </View>
-        <TouchableOpacity>
-          <Text style={styles.signUpText}>Sign up</Text>
-        </TouchableOpacity>
+        <Button text={'Sign Up'} />
       </View>
     </View>
   );
 };
 
-export default Login;
+export default SignUp;
