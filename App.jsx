@@ -2,11 +2,13 @@ import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import Login from './src/screens/Auth/Login';
 import SignUp from './src/screens/Auth/SignUp';
+import ForgotPassword from './src/screens/Auth/ForgotPassword';
 const App = () => {
   return (
     <View style={styles.mainContainer}>
-      <Login />
+      {/* <Login /> */}
       {/* <SignUp /> */}
+      <ForgotPassword />
     </View>
   );
 };

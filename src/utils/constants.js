@@ -102,5 +102,6 @@ export const CONSTANTS = {
   fontSize: {
     fontSize: 17,
     fontSize15: 15,
+    fontSize22: 22,
   },
 };

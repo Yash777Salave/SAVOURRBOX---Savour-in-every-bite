@@ -4,7 +4,7 @@ import { styles } from './style';
 const Button = ({ text }) => {
   return (
     <TouchableOpacity style={styles.ButtonContainer}>
-      <Text style={styles.buttonText}>{text}</Text>
+      <Text style={styles.buttonText}>{text.toUpperCase()}</Text>
     </TouchableOpacity>
   );
 };
