@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: CONSTANTS.colors.APP_BG_COLOR,
     alignContent: 'center',
-    alignItems: 'center',
+    // alignItems: 'center',
   },
   bgImage: {
     width: '100%',
@@ -26,13 +26,18 @@ export const styles = StyleSheet.create({
     backgroundColor: CONSTANTS.colors.APP_BG_COLOR,
     padding: 16,
     borderTopLeftRadius: 30,
-    bottom: '5%',
+    // bottom: '5%',
     // marginTop: 10,
     borderTopRightRadius: 30,
   },
   inputField: {
-    borderBottomWidth: 0.5,
+    borderBottomWidth: 0.3,
     borderBottomColor: CONSTANTS.colors.GRAY_COLOR,
+    fontSize: 13,
+  },
+
+  inputFocused: {
+    borderBottomColor: CONSTANTS.THEME.PRIMARY_COLOR,
   },
   fieldName: {
     fontSize: CONSTANTS.fontSize.fontSize,
