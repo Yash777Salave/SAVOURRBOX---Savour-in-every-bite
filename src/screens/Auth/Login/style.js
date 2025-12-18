@@ -31,7 +31,7 @@ export const styles = StyleSheet.create({
     borderTopRightRadius: 30,
   },
   inputField: {
-    borderBottomWidth: 0.5,
+    borderBottomWidth: 0.3,
     borderBottomColor: CONSTANTS.colors.GRAY_COLOR,
   },
   fieldName: {
@@ -72,5 +72,8 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 20,
     marginBottom: 20,
+  },
+  inputFocused: {
+    borderBottomColor: CONSTANTS.THEME.PRIMARY_COLOR,
   },
 });

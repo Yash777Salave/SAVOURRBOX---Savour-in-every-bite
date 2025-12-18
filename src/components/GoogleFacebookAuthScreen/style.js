@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 10,
     elevation: 6,
-    backgroundColor: '#fff',
+    backgroundColor: CONSTANTS.colors.APP_BG_COLOR,
   },
   //   iconsContainer: {
   //     // borderWidth: 1,

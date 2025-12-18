@@ -5,8 +5,8 @@ import SignUp from './src/screens/Auth/SignUp';
 const App = () => {
   return (
     <View style={styles.mainContainer}>
-      {/* <Login /> */}
-      <SignUp />
+      <Login />
+      {/* <SignUp /> */}
     </View>
   );
 };

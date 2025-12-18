@@ -26,8 +26,6 @@ export const styles = StyleSheet.create({
     backgroundColor: CONSTANTS.colors.APP_BG_COLOR,
     padding: 16,
     borderTopLeftRadius: 30,
-    // bottom: '5%',
-    // marginTop: 10,
     borderTopRightRadius: 30,
   },
   inputField: {
