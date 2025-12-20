@@ -63,6 +63,14 @@ export const styles = StyleSheet.create({
     color: CONSTANTS.THEME.PRIMARY_COLOR,
     fontWeight: 'bold',
   },
+  ForgotPasswordText: {
+    fontSize: CONSTANTS.fontSize.fontSize15,
+    color: CONSTANTS.THEME.PRIMARY_COLOR,
+    fontWeight: 'bold',
+    textAlign: 'right',
+    marginRight: 5,
+    marginTop: 6,
+  },
   continueWith: {
     fontSize: CONSTANTS.fontSize.fontSize15,
     color: CONSTANTS.colors.GRAY_COLOR,

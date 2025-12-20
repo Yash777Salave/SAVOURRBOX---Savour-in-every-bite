@@ -13,6 +13,7 @@ import {
 import { styles } from './style';
 import Button from '../../../components/Button/Button';
 import { useRef, useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
 const SignUp = () => {
   // for inputfield to change its color when it would be focus
   const [isFocused, setIsFocused] = useState(null);
@@ -21,6 +22,8 @@ const SignUp = () => {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
   const confirmPasswordRef = useRef(null);
+
+  const navigation = useNavigation();
 
   return (
     <View style={styles.mainContainer}>

@@ -11,12 +11,15 @@ import React, { useRef, useState } from 'react';
 import { styles } from './style';
 import Button from '../../../components/Button/Button';
 import { GoogleFacebookAuthScreen } from '../../../components/GoogleFacebookAuthScreen';
+import { useNavigation } from '@react-navigation/native';
 const Login = () => {
   //this is for focus on input field
   const [isFocused, setIsFocused] = useState(null);
   // this is useRef for auto focus on next input
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
+
+  const navigation = useNavigation();
 
   return (
     <View style={styles.mainContainer}>
@@ -66,6 +69,13 @@ const Login = () => {
           />
         </View>
         <Button text={'Login'} />
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('ForgotPassword');
+          }}
+        >
+          <Text style={styles.ForgotPasswordText}>Forgot Password?</Text>
+        </TouchableOpacity>
         <View style={styles.orContinueWithContainer}>
           <Text style={styles.continueWith}>or continue with</Text>
         </View>
