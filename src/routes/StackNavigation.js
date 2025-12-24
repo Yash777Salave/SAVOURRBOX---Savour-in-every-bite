@@ -1,11 +1,9 @@
-import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { NavigationContainer } from '@react-navigation/native';
 import Login from '../screens/Auth/Login';
 import SignUp from '../screens/Auth/SignUp';
 import ForgotPassword from '../screens/Auth/ForgotPassword';
-import Home from '../screens/Home/index';
+import Home from '../screens/Home/Home/index';
 
 const Stack = createNativeStackNavigator();
 
@@ -37,5 +35,3 @@ const StackNavigation = () => {
 };
 
 export default StackNavigation;
-
-const styles = StyleSheet.create({});
