@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '../Header/Header';
 import HeadingText from '../../../components/FeaturesHeading/HeadingText';
 import HeroCard from '../../../components/HeroCard/HeroCard';
+import { CONSTANTS } from '../../../utils/constants';
 const Home = () => {
   return (
     <View style={styles.mainContainer}>
@@ -24,6 +25,7 @@ export default Home;
 const styles = StyleSheet.create({
   mainContainer: {
     // borderWidth: 1,
-    margin: 10,
+    // margin: 10,
+    backgroundColor: CONSTANTS.colors.APP_BG_COLOR,
   },
 });

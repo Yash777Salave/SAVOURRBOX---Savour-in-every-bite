@@ -44,12 +44,13 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     // margin: 15,
-    marginTop: 10,
+    marginTop: 20,
     // borderWidth: 1,
     backgroundColor: CONSTANTS.colors.APP_BG_COLOR,
     // marginBottom: 20,
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
+    margin: 10,
   },
 
   bgImage: {

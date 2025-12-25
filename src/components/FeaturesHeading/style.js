@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
     color: CONSTANTS.colors.BLACK_COLOR,
     marginTop: 10,
     fontWeight: 'bold',
+    margin: 10,
   },
 });
 export default styles;
