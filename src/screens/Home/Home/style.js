@@ -1,3 +1,85 @@
 import { StyleSheet } from 'react-native';
 import { CONSTANTS } from '../../../utils/constants';
-export const styles = StyleSheet.create({});
+export const styles = StyleSheet.create({
+  mainContainer: {
+    // borderWidth: 1,
+    // margin: 10,
+    backgroundColor: CONSTANTS.colors.APP_BG_COLOR,
+    // padding: 10,
+    // backgroundColor: '#FFEBCD',
+  },
+  categoriesMainContainer: {
+    // borderWidth: 4,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignContent: 'center',
+    alignItems: 'center',
+    width: '90%',
+    alignSelf: 'center',
+    backgroundColor: CONSTANTS.colors.APP_BG_COLOR,
+  },
+  vegButtonContainer: {
+    borderWidth: 0.2,
+    padding: 5,
+    margin: 5,
+    width: '42%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    borderRadius: 80,
+    // iOS shadow
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.25,
+    shadowRadius: 6,
+    // Android shadow
+    elevation: 9,
+    borderColor: CONSTANTS.colors.GRAY_COLOR,
+    backgroundColor: CONSTANTS.colors.APP_BG_COLOR,
+  },
+  vegButtonText: {
+    textAlign: 'center',
+    fontSize: 15,
+    color: CONSTANTS.colors.BLACK_COLOR,
+  },
+  cartImage: {
+    width: 45,
+    height: 35,
+    resizeMode: 'contain',
+    // borderBottomLeftRadius: 20,
+    // borderBottomRightRadius: 20,
+    borderRadius: 100,
+    // borderWidth: 1,
+    // borderColor: CONSTANTS.colors.APP_BG_COLOR,
+    // // alignSelf: 'center',
+    // margin: 10,
+    // borderTopRightRadius: 20,
+    // borderTopLeftRadius: 20,
+    backgroundColor: CONSTANTS.colors.APP_BG_COLOR,
+  },
+  pressedMenu: {
+    borderWidth: 0.2,
+    padding: 5,
+    margin: 5,
+    width: '42%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    borderRadius: 80,
+    // iOS shadow
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.25,
+    shadowRadius: 6,
+    // Android shadow
+    elevation: 6,
+    borderColor: CONSTANTS.colors.GRAY_COLOR,
+    backgroundColor: CONSTANTS.THEME.PRIMARY_COLOR,
+  },
+  pressedVegButtonText: {
+    textAlign: 'center',
+    fontSize: 15,
+    color: CONSTANTS.colors.APP_BG_COLOR,
+    fontWeight: '600',
+  },
+});

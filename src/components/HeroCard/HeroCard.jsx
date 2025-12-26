@@ -1,9 +1,13 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './style';
 import AddOnsCard from '../AddOnsCard/AddOnsCard';
 import { CONSTANTS } from '../../utils/constants';
-const HeroCard = () => {
+const HeroCard = ({ menuItem }) => {
+  useEffect(() => {
+    console.log('veg items == ', menuItem.fourthFoodName);
+  }, [menuItem]);
+
   return (
     <View style={styles.mainCardContainer}>
       <View
@@ -14,10 +18,7 @@ const HeroCard = () => {
           //   padding: 10,
         }}
       >
-        <Image
-          source={require('../../assets/images/istockphoto-1158578874-612x612.jpg')}
-          style={styles.cartImage}
-        />
+        <Image source={menuItem.image} style={styles.cartImage} />
       </View>
       <View
         style={{
@@ -27,9 +28,10 @@ const HeroCard = () => {
           //   borderTopLeftRadius: 20,
         }}
       >
-        <Text style={styles.TodayVegTiffinText}>Today's Veg Tiffin</Text>
+        <Text style={styles.TodayVegTiffinText}>{menuItem.tiffinHeadig}</Text>
         <Text style={styles.foodMenuText}>
-          {'Dal'} • {'2 Roti'} • {'Rise'} • {'Sabji'}
+          {menuItem.firstFoodName} • {menuItem.secondFoodName} •{''}{' '}
+          {menuItem.thirdFoodName} • {menuItem.fourthFoodName}
         </Text>
         <View style={{ margin: 10 }}>
           <View
@@ -38,7 +40,7 @@ const HeroCard = () => {
               borderTopColor: CONSTANTS.colors.GRAY_COLOR,
             }}
           ></View>
-          <Text style={styles.priceText}>{'₹120'}</Text>
+          <Text style={styles.priceText}>{menuItem.price}</Text>
         </View>
       </View>
       <View style={{ margin: 10 }}>
