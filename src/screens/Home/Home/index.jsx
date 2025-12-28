@@ -17,6 +17,7 @@ import {
   specialMenuItem,
 } from '../../../utils/MenuList';
 import { styles } from './style';
+import ImageCarousel from '../../../components/Carousel/ImageSlider';
 const Home = () => {
   const [pressedValue, setPressedValue] = useState('veg');
   return (
@@ -25,6 +26,9 @@ const Home = () => {
         <Header />
       </View>
       <ScrollView contentContainerStyle={{ paddingBottom: 100 }}>
+        <View>
+          <ImageCarousel />
+        </View>
         <View style={styles.categoriesMainContainer}>
           <TouchableOpacity
             style={[
