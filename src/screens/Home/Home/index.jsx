@@ -18,6 +18,7 @@ import {
 } from '../../../utils/MenuList';
 import { styles } from './style';
 import ImageCarousel from '../../../components/Carousel/ImageSlider';
+import TrackingCard from '../../../components/TrackingCard/TrackingCard';
 const Home = () => {
   const [pressedValue, setPressedValue] = useState('veg');
   return (
@@ -84,6 +85,9 @@ const Home = () => {
           )}
           <HeadingText heading={"Today's Special"} />
           <HeroCard menuItem={specialMenuItem} />
+        </View>
+        <View style={{ margin: 15 }}>
+          <TrackingCard />
         </View>
       </ScrollView>
     </View>

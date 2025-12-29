@@ -10,8 +10,8 @@ export const styles = StyleSheet.create({
   dots: {
     backgroundColor: CONSTANTS.THEME.PRIMARY_COLOR,
 
-    height: 9,
-    width: 9,
+    height: 7,
+    width: 7,
     borderRadius: 10,
     // margin: 5,
     marginHorizontal: 6,
@@ -20,8 +20,8 @@ export const styles = StyleSheet.create({
   },
   activeDots: {
     backgroundColor: CONSTANTS.THEME.SECONDARY_COLOR,
-    height: 9,
-    width: 9,
+    height: 7,
+    width: 7,
     borderRadius: 10,
     // margin: 5,
     marginHorizontal: 6,

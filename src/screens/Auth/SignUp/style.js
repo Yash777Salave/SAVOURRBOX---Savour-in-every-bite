@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
   bgImage: {
     width: '100%',
     height: '100%',
-    backgroundColor: 'blue',
+    // backgroundColor: 'blue',
     resizeMode: 'cover',
     // borderBottomLeftRadius: 40,
     // borderBottomRightRadius: 40,
@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
   bgImageContainer: {
     width: '100%',
     height: '40%',
-    backgroundColor: 'blue',
+    // backgroundColor: 'blue',
   },
   fieldsContainer: {
     // borderWidth: 1,
