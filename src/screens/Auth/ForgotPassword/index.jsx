@@ -16,7 +16,6 @@ import Button from '../../../components/Button/Button';
 const ForgotPassword = () => {
   //this is for focus on input field
   const [isFocused, setIsFocused] = useState(null);
-  const text = 'yesh';
   return (
     <View style={styles.mainContainer}>
       <StatusBar

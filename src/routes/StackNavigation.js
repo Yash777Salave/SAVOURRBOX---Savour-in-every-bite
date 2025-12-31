@@ -5,6 +5,8 @@ import SignUp from '../screens/Auth/SignUp';
 import ForgotPassword from '../screens/Auth/ForgotPassword';
 import Home from '../screens/Home/Home/index';
 
+import BottomTabNavigation from '../routes/BottomTabNavigation';
+
 const Stack = createNativeStackNavigator();
 
 const StackNavigation = () => {
@@ -25,9 +27,14 @@ const StackNavigation = () => {
         component={ForgotPassword}
         options={{ headerShown: false }}
       />
-      <Stack.Screen
+      {/* <Stack.Screen
         name="Home"
         component={Home}
+        options={{ headerShown: false }}
+      /> */}
+      <Stack.Screen
+        name="BottomTabNavigation"
+        component={BottomTabNavigation}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

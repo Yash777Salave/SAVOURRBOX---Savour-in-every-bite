@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
     backgroundColor: CONSTANTS.colors.APP_BG_COLOR,
     // padding: 10,
     // backgroundColor: '#FFEBCD',
+    // backgroundColor: 'white',
   },
   categoriesMainContainer: {
     // borderWidth: 4,

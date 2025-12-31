@@ -26,7 +26,7 @@ const Home = () => {
       <View>
         <Header />
       </View>
-      <ScrollView contentContainerStyle={{ paddingBottom: 100 }}>
+      <ScrollView contentContainerStyle={{ paddingBottom: 140 }}>
         <View>
           <ImageCarousel />
         </View>
