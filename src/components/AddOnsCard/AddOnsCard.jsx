@@ -6,11 +6,24 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import style from './style';
 import AddOnsList from '../../utils/addOnsList';
 import { CONSTANTS } from '../../utils/constants';
 const AddOnsCard = () => {
+  const [isClickedItem, setIsClickedItem] = useState({});
+  const Increment = id => {
+    setIsClickedItem(prev => ({
+      ...prev,
+      [id]: true,
+    }));
+  };
+  const Decrement = id => {
+    setIsClickedItem(prev => ({
+      ...prev,
+      [id]: false,
+    }));
+  };
   const renderItem = ({ item }) => {
     return (
       <View style={{}}>
@@ -25,9 +38,23 @@ const AddOnsCard = () => {
             <Text style={style.foodNameText}>{item.foodName}</Text>
             <View style={style.priceAndPlusContainer}>
               <Text style={style.priceText}>{item.price}</Text>
-              <TouchableOpacity>
+              {isClickedItem[item.id] ? (
+                <View style={style.incrementCount}>
+                  <TouchableOpacity onPress={() => Decrement(item.id)}>
+                    <Image
+                      source={require('../../assets/icons/delete.png')}
+                      style={style.Plusicon}
+                    />
+                  </TouchableOpacity>
+                </View>
+              ) : (
+                <TouchableOpacity onPress={() => Increment(item.id)}>
+                  <Image source={item.addButton} style={style.Plusicon} />
+                </TouchableOpacity>
+              )}
+              {/* <TouchableOpacity onPress={Increment}>
                 <Image source={item.addButton} style={style.Plusicon} />
-              </TouchableOpacity>
+              </TouchableOpacity> */}
             </View>
           </View>
         </View>
