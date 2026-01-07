@@ -1,7 +1,10 @@
 import { StyleSheet } from 'react-native';
 import { CONSTANTS } from '../../../utils/constants';
 export const styles = StyleSheet.create({
-  mainContainer: { backgroundColor: CONSTANTS.colors.APP_BG_COLOR, flex: 1 },
+  mainContainer: {
+    backgroundColor: CONSTANTS.colors.APP_BG_COLOR,
+    flex: 1,
+  },
   headingMainContainer: {
     // height: 210,
     // width: '100%',
@@ -40,7 +43,7 @@ export const styles = StyleSheet.create({
     margin: 15,
     borderRadius: 20,
     padding: 10,
-    marginTop: 40,
+    // marginTop: 40,
     backgroundColor: CONSTANTS.colors.APP_BG_COLOR,
     elevation: 4,
   },
@@ -54,5 +57,16 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 40,
+  },
+  addressHeading: {
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  addressEditContainer: {
+    // flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginHorizontal: 5,
+    marginTop: 5,
   },
 });

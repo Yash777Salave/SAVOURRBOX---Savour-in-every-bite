@@ -1,33 +1,12 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { styles } from './style';
 import OptionsCard from '../../../components/OptionsCard/OptionsCard';
 import AddressOptionCard from '../../../components/AddressesOptionCard/AddressesOptionCard';
-const Header = () => {
+const Options = () => {
   return (
-    <View style={styles.mainContainer}>
-      <View style={styles.headingMainContainer}>
-        <TouchableOpacity>
-          <Image
-            source={require('../../../assets/icons/dots.png')}
-            style={styles.menuDote}
-          />
-        </TouchableOpacity>
-        <View style={styles.headingContainer}>
-          <View style={styles.editContainer}>
-            <Text style={styles.nameText}>Yash Salave</Text>
-            <TouchableOpacity>
-              <Image
-                source={require('../../../assets/icons/pencil.png')}
-                style={styles.editIcon}
-              />
-            </TouchableOpacity>
-          </View>
-          <Text style={styles.subText}>+91-7770089444</Text>
-          <Text style={styles.subText}>yashsalve999@gmail.com</Text>
-        </View>
-      </View>
-      {/* <View style={styles.optionsContainer}>
+    <View>
+      <View style={[styles.optionsContainer, { marginTop: 40 }]}>
         <OptionsCard
           optionName={'Payment Details'}
           icon={require('../../../assets/icons/card.png')}
@@ -60,12 +39,33 @@ const Header = () => {
           isLogoutText={'true'}
         />
       </View>
-      <View style={styles.optionsContainer}>
-        <Text>Saved Addresses</Text>
-        <AddressOptionCard />
-      </View> */}
+      <View
+        style={[styles.optionsContainer, { bottom: 10, marginBottom: 100 }]}
+      >
+        <View style={styles.addressEditContainer}>
+          <Text style={styles.addressHeading}>Saved Addresses</Text>
+          {/* <Image
+            source={require('../../../assets/icons/pencil.png')}
+            style={styles.editIcon}
+          /> */}
+        </View>
+
+        <AddressOptionCard
+          optionName={'Home'}
+          icon={require('../../../assets/icons/home3.png')}
+          isShow={'true'}
+          subText={'7th floore , infotech society, Dhule'}
+        />
+        <View style={[styles.optionsBorderTop, { marginTop: 15 }]}></View>
+        <AddressOptionCard
+          optionName={'Work'}
+          icon={require('../../../assets/icons/suitcase.png')}
+          isShow={'true'}
+          subText={'7th floore , infotech society, Dhule'}
+        />
+      </View>
     </View>
   );
 };
 
-export default Header;
+export default Options;
