@@ -3,15 +3,15 @@ import { CONSTANTS } from '../../../utils/constants';
 
 export const styles = StyleSheet.create({
   image: {
-    height: 80,
-    width: 80,
+    height: 120,
+    width: '100%',
     // borderBottomLeftRadius: 10,
     // borderTopLeftRadius: 10,
     borderRadius: 10,
   },
   cardContainer: {
-    borderWidth: 1,
-    flexDirection: 'row',
+    borderWidth: 1.5,
+    // flexDirection: 'row',
     // alignItems: 'center',
     width: '90%',
     alignSelf: 'center',
@@ -23,10 +23,12 @@ export const styles = StyleSheet.create({
     borderRadius: 15,
     borderColor: CONSTANTS.colors.LIGHT_GRAY_COLOR_1,
     gap: 10,
+    padding: 10,
   },
   mainContainer: {
     flex: 1,
     backgroundColor: CONSTANTS.colors.APP_BG_COLOR,
+    // margin: 10,
   },
   foodNameAndOrderID: {
     flexDirection: 'row',
@@ -34,8 +36,6 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   contentContainer: {
-    flex: 1,
-    paddingRight: 10,
     marginTop: 5,
   },
   orderID: {
@@ -49,6 +49,7 @@ export const styles = StyleSheet.create({
   price: {
     color: CONSTANTS.colors.BLACK_COLOR,
     fontWeight: 'bold',
+    fontSize: 17,
   },
   qtyContainer: {
     flexDirection: 'row',
@@ -76,5 +77,18 @@ export const styles = StyleSheet.create({
     borderRadius: 20,
     padding: 5,
     backgroundColor: CONSTANTS.colors.WHITE_COLOR,
+  },
+  tiffineQtyText: {
+    borderLeftWidth: 1,
+    paddingHorizontal: 10,
+    color: CONSTANTS.colors.LIGHT_GRAY_COLOR,
+    borderLeftColor: CONSTANTS.colors.LIGHT_GRAY_COLOR,
+  },
+  priceAndQtyContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    marginBottom: 10,
+    marginTop: 10,
   },
 });
