@@ -11,7 +11,10 @@ import { OngoingList } from '../../../utils/OrderCardList';
 import { styles } from './style';
 import AddOnsList from '../../../utils/addOnsList';
 import OrdersButtons from '../../../components/OrdersButtons/OrdersButtons';
+import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
 const OngoingScreen = () => {
+  const tabBarHeight = useBottomTabBarHeight();
+
   const [counts, setCounts] = useState({});
 
   const Increment = useCallback((cardId, addonId) => {
@@ -91,6 +94,9 @@ const OngoingScreen = () => {
         data={OngoingList}
         renderItem={renderItem}
         keyExtractor={item => item.id.toString()}
+        contentContainerStyle={{
+          paddingBottom: tabBarHeight + 20,
+        }}
       />
     </View>
   );

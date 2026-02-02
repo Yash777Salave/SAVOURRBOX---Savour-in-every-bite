@@ -42,6 +42,8 @@ export const HistoryList = [
     price: '₹150',
     tiffinHeadig: "Today's Non-Veg Tiffin",
     status: 'Completed',
+    date: '26 Jan',
+    time: '12:20 pm',
   },
   {
     id: '2',
@@ -52,7 +54,9 @@ export const HistoryList = [
     fourthFoodName: '1 Egg',
     price: '₹150',
     tiffinHeadig: "Today's Non-Veg Tiffin",
-    status: 'Incompleted',
+    status: 'Canceled',
+    date: '26 Jan',
+    time: '12:20 pm',
   },
   {
     id: '3',
@@ -64,5 +68,7 @@ export const HistoryList = [
     price: '₹150',
     tiffinHeadig: "Today's Non-Veg Tiffin",
     status: 'Completed',
+    date: '26 Jan',
+    time: '12:20 pm',
   },
 ];

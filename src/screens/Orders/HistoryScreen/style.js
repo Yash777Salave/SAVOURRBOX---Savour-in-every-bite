@@ -18,6 +18,38 @@ export const styles = StyleSheet.create({
     width: '100%',
     borderRadius: 10,
   },
-  completed: {},
-  inCompleted: {},
+  completed: {
+    fontSize: 17,
+    color: '#008000',
+    fontWeight: 'bold',
+  },
+  inCompleted: {
+    fontSize: 17,
+    color: '#FF0000',
+    fontWeight: 'bold',
+  },
+  heading: {
+    fontSize: 17,
+    fontWeight: 'bold',
+  },
+  dateTime: {
+    color: CONSTANTS.colors.LIGHT_GRAY_COLOR_1,
+  },
+  dateTimeContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderLeftWidth: 1,
+    paddingHorizontal: 10,
+    borderLeftColor: CONSTANTS.colors.LIGHT_GRAY_COLOR_1,
+  },
+  priceDateTimeContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+  },
+  mainContainer: {
+    flex: 1,
+    backgroundColor: CONSTANTS.colors.APP_BG_COLOR,
+    // margin: 10,
+  },
 });
