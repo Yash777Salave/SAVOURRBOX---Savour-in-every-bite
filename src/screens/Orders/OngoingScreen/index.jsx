@@ -12,9 +12,11 @@ import { styles } from './style';
 import AddOnsList from '../../../utils/addOnsList';
 import OrdersButtons from '../../../components/OrdersButtons/OrdersButtons';
 import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
+import { useSelector } from 'react-redux';
 const OngoingScreen = () => {
   const tabBarHeight = useBottomTabBarHeight();
-
+  const addonList = useSelector(state => state.addOns);
+  console.log('from Ongoing Screen ---> ', addonList);
   const [counts, setCounts] = useState({});
 
   const Increment = useCallback((cardId, addonId) => {
@@ -56,7 +58,7 @@ const OngoingScreen = () => {
           <Text style={styles.foodName}>{item.firstFoodName}</Text>
           <Text style={styles.orderID}>{'#12345'}</Text>
         </View>
-        {AddOnsList.map(addons => (
+        {addonList.map(addons => (
           <View key={addons.id} style={styles.addOnsContainer}>
             <Text>{addons.foodName}</Text>
             <View style={styles.qtyContainer}>

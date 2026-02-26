@@ -10,37 +10,45 @@ import React, { useState } from 'react';
 import style from './style';
 import AddOnsList from '../../utils/addOnsList';
 import { CONSTANTS } from '../../utils/constants';
+import { useDispatch, useSelector } from 'react-redux';
+import { addAddons, removeAddons } from '../../Redux/Slices/addOnsSlice';
 const AddOnsCard = () => {
+  const dispatch = useDispatch();
+  const addOnItem = useSelector(state => state.addOns);
+  console.log('item added from Home --- > ', addOnItem);
+
   const [isClickedItem, setIsClickedItem] = useState({});
-  const Increment = id => {
+  const Increment = item => {
     setIsClickedItem(prev => ({
       ...prev,
-      [id]: true,
+      [item?.id]: true,
     }));
+    dispatch(addAddons(item));
   };
-  const Decrement = id => {
+  const Decrement = item => {
     setIsClickedItem(prev => ({
       ...prev,
-      [id]: false,
+      [item?.id]: false,
     }));
+    dispatch(removeAddons(item));
   };
   const renderItem = ({ item }) => {
     return (
       <View style={{}}>
         <View style={style.mainCardContainer}>
-          <Image source={item.image} style={style.images} />
+          <Image source={item?.image} style={style.images} />
           <View
             style={{
               backgroundColor: CONSTANTS.colors.BLACK_COLOR,
               borderRadius: 15,
             }}
           >
-            <Text style={style.foodNameText}>{item.foodName}</Text>
+            <Text style={style.foodNameText}>{item?.foodName}</Text>
             <View style={style.priceAndPlusContainer}>
-              <Text style={style.priceText}>{item.price}</Text>
-              {isClickedItem[item.id] ? (
+              <Text style={style.priceText}>{item?.price}</Text>
+              {isClickedItem[item?.id] ? (
                 <View style={style.incrementCount}>
-                  <TouchableOpacity onPress={() => Decrement(item.id)}>
+                  <TouchableOpacity onPress={() => Decrement(item)}>
                     <Image
                       source={require('../../assets/icons/delete.png')}
                       style={style.Plusicon}
@@ -48,8 +56,8 @@ const AddOnsCard = () => {
                   </TouchableOpacity>
                 </View>
               ) : (
-                <TouchableOpacity onPress={() => Increment(item.id)}>
-                  <Image source={item.addButton} style={style.Plusicon} />
+                <TouchableOpacity onPress={() => Increment(item)}>
+                  <Image source={item?.addButton} style={style.Plusicon} />
                 </TouchableOpacity>
               )}
               {/* <TouchableOpacity onPress={Increment}>
@@ -67,7 +75,7 @@ const AddOnsCard = () => {
         horizontal
         showsHorizontalScrollIndicator={false}
         data={AddOnsList}
-        keyExtractor={item => item.id}
+        keyExtractor={item => item?.id}
         renderItem={renderItem}
         style={{
           //   borderColor: 'red',
