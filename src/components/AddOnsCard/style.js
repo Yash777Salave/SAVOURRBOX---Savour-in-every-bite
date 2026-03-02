@@ -3,8 +3,8 @@ import { CONSTANTS } from '../../utils/constants';
 
 const styles = StyleSheet.create({
   images: {
-    height: 60,
-    width: 90,
+    height: 55,
+    width: 85,
     backgroundColor: CONSTANTS.colors.APP_BG_COLOR,
     alignSelf: 'center',
     // borderBottomLeftRadius: 15,
@@ -24,15 +24,16 @@ const styles = StyleSheet.create({
   foodNameText: {
     fontSize: 15,
     color: CONSTANTS.colors.APP_BG_COLOR,
-    padding: 4,
+    // padding: 4,
     // borderWidth: 3,
     // borderColor: 'white',
+    marginHorizontal: 5,
   },
   priceText: {
     color: CONSTANTS.colors.APP_BG_COLOR,
-    marginLeft: 5,
     // margin: 5,
     padding: 4,
+    marginHorizontal: 5,
   },
   Plusicon: {
     height: 24,

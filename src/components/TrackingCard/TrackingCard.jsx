@@ -36,7 +36,7 @@ const TrackingCard = () => {
       <Text style={styles.subText}>
         Your tiffin is on the way to your location
       </Text>
-      <TouchableOpacity style={styles.buttonContainer}>
+      <TouchableOpacity activeOpacity={0.6} style={styles.buttonContainer}>
         <Text style={styles.buttonText}>Track Live →</Text>
       </TouchableOpacity>
     </View>

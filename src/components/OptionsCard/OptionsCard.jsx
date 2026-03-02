@@ -6,7 +6,11 @@ import { useNavigation } from '@react-navigation/native';
 const OptionsCard = ({ optionName, icon, isShow, isLogoutText, onPress }) => {
   return (
     <View style={styles.mainContainer}>
-      <TouchableOpacity style={styles.optionContainer} onPress={onPress}>
+      <TouchableOpacity
+        activeOpacity={0.6}
+        style={styles.optionContainer}
+        onPress={onPress}
+      >
         <View style={styles.iconOptionContainer}>
           <Image source={icon} style={styles.icon} />
           <Text

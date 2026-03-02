@@ -61,7 +61,7 @@ const HeroCard = ({ menuItem }) => {
             <Text style={styles.totalText}>Total : </Text>
             <Text style={styles.TotalPriceText}>{'₹120'}</Text>
           </View>
-          <TouchableOpacity style={styles.buttonContainer}>
+          <TouchableOpacity activeOpacity={0.6} style={styles.buttonContainer}>
             <Text style={styles.orderNowText}>Order Now</Text>
           </TouchableOpacity>
         </View>

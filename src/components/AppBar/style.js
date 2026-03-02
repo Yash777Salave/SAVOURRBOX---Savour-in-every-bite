@@ -3,19 +3,19 @@ import { CONSTANTS } from '../../utils/constants';
 
 const styles = StyleSheet.create({
   backIcon: {
-    height: 25,
-    width: 25,
+    height: 22,
+    width: 22,
   },
   mainContainer: {
-    marginTop: 20,
+    marginTop: 25,
     margin: 15,
     flexDirection: 'row',
     alignItems: 'center',
   },
   backIconContainer: {
     backgroundColor: '#DCDCDC',
-    height: 45,
-    width: 45,
+    height: 42,
+    width: 42,
     borderRadius: 100,
     justifyContent: 'center',
     alignItems: 'center',
