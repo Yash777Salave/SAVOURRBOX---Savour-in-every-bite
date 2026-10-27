@@ -1,9 +1,10 @@
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import { CONSTANTS } from '../../../utils/constants';
 
 const Header = () => {
   const cartCount = 2;
+  const notificationCount = 1;
 
   return (
     <View style={styles.mainContainer}>
@@ -15,22 +16,42 @@ const Header = () => {
           />
         </View>
         <View style={styles.locationTextContainer}>
-          <Text style={styles.locationTextMainText}>Boys Hostel, Room 12,</Text>
+          <Text style={styles.locationTextMainText}>
+            Home-Boys Hostel, Room 12,
+          </Text>
           <Text style={styles.locationTextMainText}>Pune</Text>
         </View>
       </View>
 
       <View style={styles.cartContainer}>
-        <Image
-          source={require('../../../assets/icons/shopping-bag.png')}
-          style={styles.cartImage}
-        />
+        <TouchableOpacity
+          style={styles.notificationContainer}
+          activeOpacity={0.7}
+        >
+          <Image
+            source={require('../../../assets/icons/notification.png')}
+            style={styles.notificationImage}
+          />
 
-        {cartCount > 0 && (
-          <View style={styles.cartBadge}>
-            <Text style={styles.badgeText}>{cartCount}</Text>
-          </View>
-        )}
+          {notificationCount > 0 && (
+            <View style={styles.cartBadge}>
+              <Text style={styles.badgeText}>{notificationCount}</Text>
+            </View>
+          )}
+        </TouchableOpacity>
+
+        <TouchableOpacity activeOpacity={0.7}>
+          <Image
+            source={require('../../../assets/icons/shopping-bag.png')}
+            style={styles.cartImage}
+          />
+
+          {cartCount > 0 && (
+            <View style={styles.cartBadge}>
+              <Text style={styles.badgeText}>{cartCount}</Text>
+            </View>
+          )}
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -61,11 +82,14 @@ const styles = StyleSheet.create({
   cartContainer: {
     position: 'relative',
     // marginTop: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
   },
 
   cartImage: {
-    width: 32,
-    height: 32,
+    width: 30,
+    height: 30,
     tintColor: 'black',
   },
 
@@ -102,5 +126,11 @@ const styles = StyleSheet.create({
     // flexDirection: 'row',
     // alignItems: 'center',
     // gap: 5,
+  },
+  notificationContainer: {},
+  notificationImage: {
+    width: 30,
+    height: 30,
+    tintColor: 'black',
   },
 });
