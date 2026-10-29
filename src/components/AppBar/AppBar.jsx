@@ -17,7 +17,7 @@ const AppBar = ({ text }) => {
           style={styles.backIcon}
         />
       </TouchableOpacity>
-      <View>
+      <View style={styles.headingContainer}>
         <Text style={styles.headingText}>{text}</Text>
       </View>
     </View>

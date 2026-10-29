@@ -1,11 +1,12 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import { CONSTANTS } from '../../../utils/constants';
+import { useNavigation } from '@react-navigation/native';
 
 const Header = () => {
   const cartCount = 2;
   const notificationCount = 1;
-
+  const navigation = useNavigation();
   return (
     <View style={styles.mainContainer}>
       <View style={styles.locationContainer}>
@@ -27,6 +28,9 @@ const Header = () => {
         <TouchableOpacity
           style={styles.notificationContainer}
           activeOpacity={0.7}
+          onPress={() => {
+            navigation.navigate('Notification');
+          }}
         >
           <Image
             source={require('../../../assets/icons/notification.png')}

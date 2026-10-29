@@ -1,0 +1,103 @@
+export const NotificationList = [
+  {
+    title: 'Today',
+    data: [
+      {
+        id: '1',
+        type: 'order',
+        title: 'Order Confirmed',
+        message: 'Your order #ORD1024 has been confirmed.',
+        time: '10:45 AM',
+        isRead: false,
+        icon: 'storefront',
+      },
+      {
+        id: '2',
+        type: 'promotion',
+        title: 'Special Offer Just for You!',
+        message: 'Get 20% off on your next purchase.',
+        time: '9:30 AM',
+        isRead: false,
+        icon: 'discount',
+      },
+      {
+        id: '3',
+        type: 'delivery',
+        title: 'Order Out for Delivery',
+        message: 'Your order is on its way to you.',
+        time: '8:15 AM',
+        isRead: true,
+        icon: 'delivery-dining',
+      },
+    ],
+  },
+  {
+    title: 'Yesterday',
+    data: [
+      {
+        id: '4',
+        type: 'order',
+        title: 'Order Delivered',
+        message: 'Your order #ORD1018 has been delivered successfully.',
+        time: '6:20 PM',
+        isRead: true,
+        icon: 'check-circle',
+      },
+      {
+        id: '5',
+        type: 'promotion',
+        title: 'Special Offer Just for You!',
+        message: 'Get 20% off on your next purchase.',
+        time: '9:30 AM',
+        isRead: false,
+        icon: 'discount',
+      },
+    ],
+  },
+  {
+    title: 'This Week',
+    data: [
+      {
+        id: '6',
+        type: 'payment',
+        title: 'Payment Successful',
+        message: 'Your payment of ₹1,499 was completed successfully.',
+        time: 'Mon, 11:30 AM',
+        isRead: true,
+        icon: 'check-circle',
+      },
+      {
+        id: '7',
+        type: 'promotion',
+        title: 'Weekend Sale Is Live!',
+        message: 'Explore amazing deals on your favourite products.',
+        time: 'Mon, 9:00 AM',
+        isRead: true,
+        icon: 'discount',
+      },
+    ],
+  },
+  {
+    title: 'Earlier',
+    data: [
+      {
+        id: '8',
+        type: 'order',
+        title: 'Order Confirmed',
+        message: 'Your order #ORD1024 has been confirmed.',
+        time: '10:45 AM',
+        isRead: false,
+        icon: 'storefront',
+      },
+      {
+        id: '9',
+        type: 'cancelled',
+        title: 'Order Cancelled!',
+        message: 'Order #sp12344 has been Cancelled.',
+        time: 'Mon, 9:00 AM',
+        isRead: true,
+        icon: 'cancel',
+      },
+    ],
+  },
+];

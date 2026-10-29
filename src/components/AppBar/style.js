@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
     margin: 15,
     flexDirection: 'row',
     alignItems: 'center',
+    position: 'relative',
   },
   backIconContainer: {
     backgroundColor: '#DCDCDC',
@@ -22,8 +23,15 @@ const styles = StyleSheet.create({
   },
   headingText: {
     fontSize: CONSTANTS.fontSize.fontSize22,
-    marginLeft: 20,
-    fontWeight: 'condensed',
+    fontWeight: '600',
+    textAlign: 'center',
+  },
+  headingContainer: {
+    position: 'absolute',
+    justifyContent: 'center',
+    alignItems: 'center',
+    left: 0,
+    right: 0,
   },
 });
 export default styles;

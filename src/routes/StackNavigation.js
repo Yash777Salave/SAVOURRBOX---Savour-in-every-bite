@@ -3,11 +3,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from '../screens/Auth/Login';
 import SignUp from '../screens/Auth/SignUp';
 import ForgotPassword from '../screens/Auth/ForgotPassword';
-import Home from '../screens/Home/Home/index';
 import AboutUsScreen from '../screens/Profile/InformationScreens/AboutUsScreen/AboutUsScreen';
 import BottomTabNavigation from '../routes/BottomTabNavigation';
 import PaymentDetailsScreen from '../screens/Profile/InformationScreens/PaymentDetails/PaymentDetailsScreen';
 import HelpSupport from '../screens/Profile/InformationScreens/HelpSupport/HelpSupport';
+import Notification from '../screens/Notification/index';
 const Stack = createNativeStackNavigator();
 
 const StackNavigation = () => {
@@ -53,6 +53,11 @@ const StackNavigation = () => {
       <Stack.Screen
         name="HelpSupport"
         component={HelpSupport}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Notification"
+        component={Notification}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
