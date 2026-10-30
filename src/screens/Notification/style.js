@@ -8,6 +8,9 @@ const styles = StyleSheet.create({
   },
   mainNotificationContainer: {
     margin: 20,
+    flex: 1,
+    // justifyContent: 'center',
+    // alignContent: 'center',
   },
   searchBox: {
     borderWidth: 1,

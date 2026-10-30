@@ -18,8 +18,9 @@ const Notification = () => {
             placeholderTextColor={CONSTANTS.colors.LIGHT_GRAY_COLOR}
           />
         </View>
-        <View>
+        <View style={{ flex: 1 }}>
           <SectionList
+            // style={{ flex: 1 }}
             sections={NotificationList}
             keyExtractor={(item, index) => item.id}
             renderItem={({ item }) => (
@@ -30,6 +31,10 @@ const Notification = () => {
             renderSectionHeader={({ section: { title } }) => (
               <Text style={styles.sectionHeader}>{title}</Text>
             )}
+            showsVerticalScrollIndicator={false}
+            // contentContainerStyle={{
+            //   paddingBottom: 30,
+            // }}
           />
         </View>
       </View>
