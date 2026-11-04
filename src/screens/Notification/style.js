@@ -21,6 +21,15 @@ const styles = StyleSheet.create({
     backgroundColor: CONSTANTS.colors.LIGHT_GRAY_COLOR_1,
     borderColor: CONSTANTS.colors.LIGHT_GRAY_COLOR,
   },
+
+  searchInput: {
+    flex: 1,
+    minWidth: 0,
+    fontSize: 16,
+    paddingVertical: 8,
+    paddingHorizontal: 5,
+    color: CONSTANTS.colors.BLACK_COLOR,
+  },
   sectionHeader: {
     fontSize: 15,
     fontWeight: '700',
